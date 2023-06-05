@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,700&display=swap');
+
+:root {
+    --color1: #374259;
+    --color2: #545b77;
+    --color3: #5c8984;
+    --color4: #f2d8d8;
+    background-color: var(--color3)
+}
+
+.App {
+    box-sizing: border-box;
+}
+
+#quote-box {
+    background-color: var(--color4);
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: min-content;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    font-family: Merriweather, serif;
+    box-shadow: 2px 2px 3px 5px rgba(0, 0, 0, 0.4),
+                -1px -1px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+span {
+    color: var(--color2);
+    font-size: 30px;
+    margin: 0 10px;
+    padding: 0;
+    font-style: italic;
+}
+
+#text {
+    color: var(--color1);
+    font-size: 30px;
+    font-weight: 700;
+    text-indent: 10px;
+    padding: 0 10px;
+    margin: 20px;
+}
+
+#author {
+    color: var(--color2);    
+    font-style: italic;
+    font-size: 20px;
+    padding: 0 10px;
+    text-align: right;
+    margin: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    border-top: 2px solid var(--color1);
+    margin:  10px auto;
+}
+
+.btn {
+    text-decoration: none;
+    margin: 20px 0 0;
+    background-color: var(--color4);
+    padding: 5px 15px;
+    border: 1px solid var(--color1);
+    border-radius: 5px;
+    color: var(--color2);
+    font-size: 22px;
+    font-family: inherit;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--color1);
+    color: var(--color4);
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+@media screen and (max-width: 600px) {
+    .links {
+        width: 90%;
+        justify-content: space-between;
+    }
+    #text {
+        font-size: 25px;
+    }
+    #author {
+        font-size: 15px;
+    }       
+}
